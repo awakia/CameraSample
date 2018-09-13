@@ -29,6 +29,7 @@ class ViewController: UIViewController, AVCapturePhotoCaptureDelegate {
 
         session.sessionPreset = .photo
         let previewLayer = AVCaptureVideoPreviewLayer(session: session)
+        previewLayer.videoGravity = AVLayerVideoGravity.resizeAspectFill
         previewLayer.frame = view.bounds
         view.layer.addSublayer(previewLayer)
 
@@ -37,15 +38,18 @@ class ViewController: UIViewController, AVCapturePhotoCaptureDelegate {
 
         // 撮影ボタンを生成
         let button = UIButton()
+        view.addSubview(button)
         button.setTitle("撮影", for: .normal)
         button.contentMode = .center
-        button.frame = CGRect(x: 0, y: 0, width: 80, height: 80)
+        button.translatesAutoresizingMaskIntoConstraints = false
+        button.centerXAnchor.constraint(equalTo: view.centerXAnchor).isActive = true
+        button.bottomAnchor.constraint(equalTo: view.safeAreaLayoutGuide.bottomAnchor, constant: -10.0).isActive = true
+        button.widthAnchor.constraint(equalToConstant: 80.0).isActive = true
+        button.heightAnchor.constraint(equalToConstant: 80.0).isActive = true
         button.backgroundColor = UIColor.blue
         //button.tintColor = UIColor.grayColor()
         //button.setTitleColor(UIColor.blue, for: UIControlState())
-        button.layer.position = CGPoint(x: view.frame.width / 2, y: self.view.bounds.size.height - 80)
         button.addTarget(self, action: #selector(ViewController.shot(_:)), for: .touchUpInside)
-        view.addSubview(button)
     }
 
     override func didReceiveMemoryWarning() {
