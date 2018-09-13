@@ -14,6 +14,7 @@
 		478A355E2148D45F00536551 /* LaunchScreen.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 478A355C2148D45F00536551 /* LaunchScreen.storyboard */; };
 		478A35692148D45F00536551 /* CameraSampleTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = 478A35682148D45F00536551 /* CameraSampleTests.swift */; };
 		478A3574214929EA00536551 /* opencv2.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 478A3573214929EA00536551 /* opencv2.framework */; };
+		478A357821492A8200536551 /* OpenCVWrapper.mm in Sources */ = {isa = PBXBuildFile; fileRef = 478A357721492A8200536551 /* OpenCVWrapper.mm */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
@@ -38,6 +39,9 @@
 		478A35682148D45F00536551 /* CameraSampleTests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CameraSampleTests.swift; sourceTree = "<group>"; };
 		478A356A2148D45F00536551 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
 		478A3573214929EA00536551 /* opencv2.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; path = opencv2.framework; sourceTree = "<group>"; };
+		478A357521492A8100536551 /* CameraSample-Bridging-Header.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = "CameraSample-Bridging-Header.h"; sourceTree = "<group>"; };
+		478A357621492A8200536551 /* OpenCVWrapper.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = OpenCVWrapper.h; sourceTree = "<group>"; };
+		478A357721492A8200536551 /* OpenCVWrapper.mm */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.cpp.objcpp; path = OpenCVWrapper.mm; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -65,6 +69,7 @@
 				478A35522148D45D00536551 /* CameraSample */,
 				478A35672148D45F00536551 /* CameraSampleTests */,
 				478A35512148D45D00536551 /* Products */,
+				478A357521492A8100536551 /* CameraSample-Bridging-Header.h */,
 			);
 			sourceTree = "<group>";
 		};
@@ -80,6 +85,8 @@
 		478A35522148D45D00536551 /* CameraSample */ = {
 			isa = PBXGroup;
 			children = (
+				478A357621492A8200536551 /* OpenCVWrapper.h */,
+				478A357721492A8200536551 /* OpenCVWrapper.mm */,
 				478A35532148D45D00536551 /* AppDelegate.swift */,
 				478A35552148D45D00536551 /* ViewController.swift */,
 				478A35572148D45D00536551 /* Main.storyboard */,
@@ -150,6 +157,7 @@
 				TargetAttributes = {
 					478A354F2148D45D00536551 = {
 						CreatedOnToolsVersion = 9.4.1;
+						LastSwiftMigration = 0940;
 					};
 					478A35632148D45F00536551 = {
 						CreatedOnToolsVersion = 9.4.1;
@@ -203,6 +211,7 @@
 			files = (
 				478A35562148D45D00536551 /* ViewController.swift in Sources */,
 				478A35542148D45D00536551 /* AppDelegate.swift in Sources */,
+				478A357821492A8200536551 /* OpenCVWrapper.mm in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -362,6 +371,7 @@
 			isa = XCBuildConfiguration;
 			buildSettings = {
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
+				CLANG_ENABLE_MODULES = YES;
 				CODE_SIGN_STYLE = Automatic;
 				DEVELOPMENT_TEAM = LL5Q5F4RJN;
 				FRAMEWORK_SEARCH_PATHS = (
@@ -375,6 +385,8 @@
 				);
 				PRODUCT_BUNDLE_IDENTIFIER = com.example.CameraSample;
 				PRODUCT_NAME = "$(TARGET_NAME)";
+				SWIFT_OBJC_BRIDGING_HEADER = "CameraSample-Bridging-Header.h";
+				SWIFT_OPTIMIZATION_LEVEL = "-Onone";
 				SWIFT_VERSION = 4.0;
 				TARGETED_DEVICE_FAMILY = "1,2";
 			};
@@ -384,6 +396,7 @@
 			isa = XCBuildConfiguration;
 			buildSettings = {
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
+				CLANG_ENABLE_MODULES = YES;
 				CODE_SIGN_STYLE = Automatic;
 				DEVELOPMENT_TEAM = LL5Q5F4RJN;
 				FRAMEWORK_SEARCH_PATHS = (
@@ -397,6 +410,7 @@
 				);
 				PRODUCT_BUNDLE_IDENTIFIER = com.example.CameraSample;
 				PRODUCT_NAME = "$(TARGET_NAME)";
+				SWIFT_OBJC_BRIDGING_HEADER = "CameraSample-Bridging-Header.h";
 				SWIFT_VERSION = 4.0;
 				TARGETED_DEVICE_FAMILY = "1,2";
 			};
