@@ -6,6 +6,7 @@ target 'CameraSample' do
   use_frameworks!
 
   # Pods for CameraSample
+  pod 'OpenCV'
 
   target 'CameraSampleTests' do
     inherit! :search_paths
