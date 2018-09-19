@@ -13,7 +13,6 @@
 		478A355B2148D45F00536551 /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 478A355A2148D45F00536551 /* Assets.xcassets */; };
 		478A355E2148D45F00536551 /* LaunchScreen.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 478A355C2148D45F00536551 /* LaunchScreen.storyboard */; };
 		478A35692148D45F00536551 /* CameraSampleTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = 478A35682148D45F00536551 /* CameraSampleTests.swift */; };
-		478A3574214929EA00536551 /* opencv2.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 478A3573214929EA00536551 /* opencv2.framework */; };
 		478A357821492A8200536551 /* OpenCVWrapper.mm in Sources */ = {isa = PBXBuildFile; fileRef = 478A357721492A8200536551 /* OpenCVWrapper.mm */; };
 /* End PBXBuildFile section */
 
@@ -38,7 +37,6 @@
 		478A35642148D45F00536551 /* CameraSampleTests.xctest */ = {isa = PBXFileReference; explicitFileType = wrapper.cfbundle; includeInIndex = 0; path = CameraSampleTests.xctest; sourceTree = BUILT_PRODUCTS_DIR; };
 		478A35682148D45F00536551 /* CameraSampleTests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CameraSampleTests.swift; sourceTree = "<group>"; };
 		478A356A2148D45F00536551 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
-		478A3573214929EA00536551 /* opencv2.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; path = opencv2.framework; sourceTree = "<group>"; };
 		478A357521492A8100536551 /* CameraSample-Bridging-Header.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = "CameraSample-Bridging-Header.h"; sourceTree = "<group>"; };
 		478A357621492A8200536551 /* OpenCVWrapper.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = OpenCVWrapper.h; sourceTree = "<group>"; };
 		478A357721492A8200536551 /* OpenCVWrapper.mm */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.cpp.objcpp; path = OpenCVWrapper.mm; sourceTree = "<group>"; };
@@ -49,7 +47,6 @@
 			isa = PBXFrameworksBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
-				478A3574214929EA00536551 /* opencv2.framework in Frameworks */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -93,7 +90,6 @@
 				478A355A2148D45F00536551 /* Assets.xcassets */,
 				478A355C2148D45F00536551 /* LaunchScreen.storyboard */,
 				478A355F2148D45F00536551 /* Info.plist */,
-				478A3573214929EA00536551 /* opencv2.framework */,
 			);
 			path = CameraSample;
 			sourceTree = "<group>";
