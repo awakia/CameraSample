@@ -14,11 +14,16 @@ class ViewController: UIViewController, AVCapturePhotoCaptureDelegate {
     var session: AVCaptureSession!
     var output: AVCaptureVideoDataOutput!
 
+    fileprivate var currentSampleBuffer: CMSampleBuffer?
+    var currentFrame: UIImage? { return self.currentSampleBuffer?.toUIImage() }
+
     override func viewDidLoad() {
         super.viewDidLoad()
 
+        let cameraQueue = DispatchQueue(label: "camera.queue")
         session = AVCaptureSession()
         output = AVCaptureVideoDataOutput()
+        output.setSampleBufferDelegate(self, queue: cameraQueue)
         device = AVCaptureDevice.default(.builtInWideAngleCamera, for: .video, position: .back)
         guard let input = try? AVCaptureDeviceInput(device: device) else {
             print("Caught exception!")
@@ -31,6 +36,7 @@ class ViewController: UIViewController, AVCapturePhotoCaptureDelegate {
         let previewLayer = AVCaptureVideoPreviewLayer(session: session)
         previewLayer.videoGravity = AVLayerVideoGravity.resizeAspectFill
         previewLayer.frame = view.bounds
+
         view.layer.addSublayer(previewLayer)
 
         // セッションを開始
@@ -62,6 +68,12 @@ class ViewController: UIViewController, AVCapturePhotoCaptureDelegate {
     @objc func shot(_ sender: AnyObject) {
         //let connection = output.connection(with: .video)
 
+    }
+}
+
+extension ViewController: AVCaptureVideoDataOutputSampleBufferDelegate {
+    func captureOutput(_ captureOutput: AVCaptureOutput, didOutput sampleBuffer: CMSampleBuffer, from connection: AVCaptureConnection) {
+        currentSampleBuffer = sampleBuffer
     }
 }
 
