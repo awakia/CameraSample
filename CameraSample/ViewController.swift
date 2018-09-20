@@ -13,6 +13,7 @@ class ViewController: UIViewController, AVCapturePhotoCaptureDelegate {
     var device: AVCaptureDevice!
     var session: AVCaptureSession!
     var output: AVCaptureVideoDataOutput!
+    var imageView: UIImageView!
 
     fileprivate var currentSampleBuffer: CMSampleBuffer?
     var currentFrame: UIImage? { return self.currentSampleBuffer?.toUIImage() }
@@ -42,12 +43,14 @@ class ViewController: UIViewController, AVCapturePhotoCaptureDelegate {
         // セッションを開始
         session.startRunning()
 
-        let imageView = UIImageView(image: OpenCVWrapper.saturation(currentFrame))
+        imageView = UIImageView()
+        view.addSubview(imageView)
         imageView.translatesAutoresizingMaskIntoConstraints = false
-        imageView.centerXAnchor.constraint(equalTo: view.centerXAnchor).isActive = true
-        imageView.bottomAnchor.constraint(equalTo: view.safeAreaLayoutGuide.bottomAnchor, constant: -10.0).isActive = true
-        imageView.widthAnchor.constraint(equalToConstant: 80.0).isActive = true
-        imageView.heightAnchor.constraint(equalToConstant: 80.0).isActive = true
+        imageView.bottomAnchor.constraint(equalTo: view.bottomAnchor).isActive = true
+        imageView.topAnchor.constraint(equalTo: view.bottomAnchor, constant: -300.0).isActive = true
+        imageView.leadingAnchor.constraint(equalTo: view.safeAreaLayoutGuide.leadingAnchor).isActive = true
+        imageView.trailingAnchor.constraint(equalTo: view.safeAreaLayoutGuide.trailingAnchor).isActive = true
+
 
 //        // 撮影ボタンを生成
 //        let button = UIButton()
@@ -81,6 +84,11 @@ class ViewController: UIViewController, AVCapturePhotoCaptureDelegate {
 extension ViewController: AVCaptureVideoDataOutputSampleBufferDelegate {
     func captureOutput(_ captureOutput: AVCaptureOutput, didOutput sampleBuffer: CMSampleBuffer, from connection: AVCaptureConnection) {
         currentSampleBuffer = sampleBuffer
+        DispatchQueue.main.async {
+            if let currentFrame = self.currentFrame {
+                self.imageView.image = OpenCVWrapper.saturation(currentFrame)
+            }
+        }
     }
 }
 
