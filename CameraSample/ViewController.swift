@@ -42,20 +42,27 @@ class ViewController: UIViewController, AVCapturePhotoCaptureDelegate {
         // セッションを開始
         session.startRunning()
 
-        // 撮影ボタンを生成
-        let button = UIButton()
-        view.addSubview(button)
-        button.setTitle("撮影", for: .normal)
-        button.contentMode = .center
-        button.translatesAutoresizingMaskIntoConstraints = false
-        button.centerXAnchor.constraint(equalTo: view.centerXAnchor).isActive = true
-        button.bottomAnchor.constraint(equalTo: view.safeAreaLayoutGuide.bottomAnchor, constant: -10.0).isActive = true
-        button.widthAnchor.constraint(equalToConstant: 80.0).isActive = true
-        button.heightAnchor.constraint(equalToConstant: 80.0).isActive = true
-        button.backgroundColor = UIColor.blue
-        //button.tintColor = UIColor.grayColor()
-        //button.setTitleColor(UIColor.blue, for: UIControlState())
-        button.addTarget(self, action: #selector(ViewController.shot(_:)), for: .touchUpInside)
+        let imageView = UIImageView(image: OpenCVWrapper.saturation(currentFrame))
+        imageView.translatesAutoresizingMaskIntoConstraints = false
+        imageView.centerXAnchor.constraint(equalTo: view.centerXAnchor).isActive = true
+        imageView.bottomAnchor.constraint(equalTo: view.safeAreaLayoutGuide.bottomAnchor, constant: -10.0).isActive = true
+        imageView.widthAnchor.constraint(equalToConstant: 80.0).isActive = true
+        imageView.heightAnchor.constraint(equalToConstant: 80.0).isActive = true
+
+//        // 撮影ボタンを生成
+//        let button = UIButton()
+//        view.addSubview(button)
+//        button.setTitle("撮影", for: .normal)
+//        button.contentMode = .center
+//        button.translatesAutoresizingMaskIntoConstraints = false
+//        button.centerXAnchor.constraint(equalTo: view.centerXAnchor).isActive = true
+//        button.bottomAnchor.constraint(equalTo: view.safeAreaLayoutGuide.bottomAnchor, constant: -10.0).isActive = true
+//        button.widthAnchor.constraint(equalToConstant: 80.0).isActive = true
+//        button.heightAnchor.constraint(equalToConstant: 80.0).isActive = true
+//        button.backgroundColor = UIColor.blue
+//        //button.tintColor = UIColor.grayColor()
+//        //button.setTitleColor(UIColor.blue, for: UIControlState())
+//        button.addTarget(self, action: #selector(ViewController.shot(_:)), for: .touchUpInside)
     }
 
     override func didReceiveMemoryWarning() {

@@ -7,7 +7,10 @@
 //
 
 #import <Foundation/Foundation.h>
+#import <AVFoundation/AVFoundation.h>
 
 @interface OpenCVWrapper : NSObject
+
++(UIImage *)Saturation:(UIImage *)image;
 
 @end

@@ -16,6 +16,7 @@
 		478A355E2148D45F00536551 /* LaunchScreen.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 478A355C2148D45F00536551 /* LaunchScreen.storyboard */; };
 		478A35692148D45F00536551 /* CameraSampleTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = 478A35682148D45F00536551 /* CameraSampleTests.swift */; };
 		478A357821492A8200536551 /* OpenCVWrapper.mm in Sources */ = {isa = PBXBuildFile; fileRef = 478A357721492A8200536551 /* OpenCVWrapper.mm */; };
+		47B216CE215383B000D1FCEB /* image_filteres.cpp in Sources */ = {isa = PBXBuildFile; fileRef = 47B216CC215383B000D1FCEB /* image_filteres.cpp */; };
 		5178FF26851F04DB23789C87 /* Pods_CameraSample.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = AD9601CE2D2C356FD524CBEA /* Pods_CameraSample.framework */; };
 /* End PBXBuildFile section */
 
@@ -45,6 +46,8 @@
 		478A357521492A8100536551 /* CameraSample-Bridging-Header.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = "CameraSample-Bridging-Header.h"; sourceTree = "<group>"; };
 		478A357621492A8200536551 /* OpenCVWrapper.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = OpenCVWrapper.h; sourceTree = "<group>"; };
 		478A357721492A8200536551 /* OpenCVWrapper.mm */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.cpp.objcpp; path = OpenCVWrapper.mm; sourceTree = "<group>"; };
+		47B216CC215383B000D1FCEB /* image_filteres.cpp */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.cpp.cpp; path = image_filteres.cpp; sourceTree = "<group>"; };
+		47B216CD215383B000D1FCEB /* image_filteres.hpp */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.cpp.h; path = image_filteres.hpp; sourceTree = "<group>"; };
 		6C2A7B8C6353341AB5F3C25F /* Pods_CameraSampleTests.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = Pods_CameraSampleTests.framework; sourceTree = BUILT_PRODUCTS_DIR; };
 		AD9601CE2D2C356FD524CBEA /* Pods_CameraSample.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = Pods_CameraSample.framework; sourceTree = BUILT_PRODUCTS_DIR; };
 		C2474989657E1DF0B2E0D4F2 /* Pods-CameraSample.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-CameraSample.debug.xcconfig"; path = "Pods/Target Support Files/Pods-CameraSample/Pods-CameraSample.debug.xcconfig"; sourceTree = "<group>"; };
@@ -115,6 +118,7 @@
 		478A35522148D45D00536551 /* CameraSample */ = {
 			isa = PBXGroup;
 			children = (
+				47B216CA2153830300D1FCEB /* OpenCV */,
 				472CDF6321523EC700A53EE2 /* Extentions */,
 				478A357621492A8200536551 /* OpenCVWrapper.h */,
 				478A357721492A8200536551 /* OpenCVWrapper.mm */,
@@ -135,6 +139,15 @@
 				478A356A2148D45F00536551 /* Info.plist */,
 			);
 			path = CameraSampleTests;
+			sourceTree = "<group>";
+		};
+		47B216CA2153830300D1FCEB /* OpenCV */ = {
+			isa = PBXGroup;
+			children = (
+				47B216CC215383B000D1FCEB /* image_filteres.cpp */,
+				47B216CD215383B000D1FCEB /* image_filteres.hpp */,
+			);
+			path = OpenCV;
 			sourceTree = "<group>";
 		};
 		85E6259D7E4A2A941A16A003 /* Frameworks */ = {
@@ -292,6 +305,7 @@
 				478A35562148D45D00536551 /* ViewController.swift in Sources */,
 				478A35542148D45D00536551 /* AppDelegate.swift in Sources */,
 				478A357821492A8200536551 /* OpenCVWrapper.mm in Sources */,
+				47B216CE215383B000D1FCEB /* image_filteres.cpp in Sources */,
 				472CDF6521523F1800A53EE2 /* CMSampleBuffer.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
