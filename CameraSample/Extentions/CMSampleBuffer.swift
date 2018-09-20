@@ -17,6 +17,6 @@ extension CMSampleBuffer {
         let rawImage = UIImage(cgImage: cgimage!)
         guard let rawCGImage = rawImage.cgImage else { return nil }
         let image = UIImage(cgImage: rawCGImage, scale: rawImage.scale, orientation: .right)
-        return image
+        return image.fixOrientation()
     }
 }

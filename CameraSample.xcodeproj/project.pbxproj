@@ -9,6 +9,7 @@
 /* Begin PBXBuildFile section */
 		2DDDB5C2B4B69B7861330EE9 /* Pods_CameraSampleTests.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 6C2A7B8C6353341AB5F3C25F /* Pods_CameraSampleTests.framework */; };
 		472CDF6521523F1800A53EE2 /* CMSampleBuffer.swift in Sources */ = {isa = PBXBuildFile; fileRef = 472CDF6421523F1800A53EE2 /* CMSampleBuffer.swift */; };
+		473BBF9E2153AB1700A41759 /* UIImage.swift in Sources */ = {isa = PBXBuildFile; fileRef = 473BBF9D2153AB1700A41759 /* UIImage.swift */; };
 		478A35542148D45D00536551 /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = 478A35532148D45D00536551 /* AppDelegate.swift */; };
 		478A35562148D45D00536551 /* ViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 478A35552148D45D00536551 /* ViewController.swift */; };
 		478A35592148D45D00536551 /* Main.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 478A35572148D45D00536551 /* Main.storyboard */; };
@@ -33,6 +34,7 @@
 /* Begin PBXFileReference section */
 		29C799A34076B15D62C2E5B5 /* Pods-CameraSampleTests.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-CameraSampleTests.debug.xcconfig"; path = "Pods/Target Support Files/Pods-CameraSampleTests/Pods-CameraSampleTests.debug.xcconfig"; sourceTree = "<group>"; };
 		472CDF6421523F1800A53EE2 /* CMSampleBuffer.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CMSampleBuffer.swift; sourceTree = "<group>"; };
+		473BBF9D2153AB1700A41759 /* UIImage.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = UIImage.swift; sourceTree = "<group>"; };
 		478A35502148D45D00536551 /* CameraSample.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = CameraSample.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		478A35532148D45D00536551 /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
 		478A35552148D45D00536551 /* ViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ViewController.swift; sourceTree = "<group>"; };
@@ -90,6 +92,7 @@
 			isa = PBXGroup;
 			children = (
 				472CDF6421523F1800A53EE2 /* CMSampleBuffer.swift */,
+				473BBF9D2153AB1700A41759 /* UIImage.swift */,
 			);
 			path = Extentions;
 			sourceTree = "<group>";
@@ -305,6 +308,7 @@
 				478A35562148D45D00536551 /* ViewController.swift in Sources */,
 				478A35542148D45D00536551 /* AppDelegate.swift in Sources */,
 				478A357821492A8200536551 /* OpenCVWrapper.mm in Sources */,
+				473BBF9E2153AB1700A41759 /* UIImage.swift in Sources */,
 				47B216CE215383B000D1FCEB /* image_filteres.cpp in Sources */,
 				472CDF6521523F1800A53EE2 /* CMSampleBuffer.swift in Sources */,
 			);
